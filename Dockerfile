@@ -24,5 +24,7 @@ RUN set -eux \
 # copy project
 COPY *.py /usr/src/app/
 
+EXPOSE 8000
+
 # start
-COMMAND ["uvicorn" ,"app:app", "--reload", "--workers=1", "--host=0.0.0.0", "--port=8000"]
+CMD ["uvicorn" ,"app:app", "--reload", "--workers=1", "--host=0.0.0.0", "--port=8000"]
